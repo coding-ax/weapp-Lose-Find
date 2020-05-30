@@ -1,0 +1,37 @@
+<!--pages/find/find.wxml-->
+<view class="losebox">
+
+    <!-- 通告栏
+    <view class="box-message">
+        <van-notice-bar mode="closeable" text="{{ text }}" speed="{{speedValue}}" left-icon="/assets/img/anice.png" />
+    </view> -->
+    <!-- 搜索框 -->
+    <view class="search-box">
+        <van-search bind:search="search" value="{{ value }}" input-align="center"  placeholder="请输入搜索关键词" />
+    </view>
+    <!-- 主图片 -->
+    <view class="box-main-img">
+        <swiper duration="1000" indicator-dots circular autoplay>
+            <swiper-item wx:for="{{imgSrc}}" wx:key="item">
+                <image src="{{item}}" mode="widthFix" height="300px" ></image>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!--  主题-->
+    <view class="box-lazyload-detail">
+        <block wx:for="{{publicInfos}}" wx:key="index">
+            <view bindtap="seeDetail" data-index="{{index}}">
+                <showbox publicInfo="{{item}}" urls="{{item.photos}}" statusIndex="3"></showbox>
+            </view>
+        </block>
+    </view>
+    <!-- 底线 -->
+
+    <!-- 按钮 -->
+    <view>
+        <small-target login="{{login}}" />
+    </view>
+
+    <!-- notice -->
+    <van-toast id="van-toast" />
+</view>

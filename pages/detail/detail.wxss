@@ -1,0 +1,51 @@
+/* pages/detail/detail.wxss */
+/* 总体盒子设置margin和大小 */
+.detailbox{
+    width: 90%;
+    padding: 30rpx 30rpx 0 30rpx;
+}
+
+/* 按钮盒子 */
+.submit-button{
+    padding-top: 40rpx;
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.submit-item{
+    flex: 1;
+}
+.submit-item .van-button{
+    width: 250rpx;
+}
+
+
+/* 信息展示盒子 */
+.show-message{
+   width: 500rpx;
+   height: 300rpx;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+}
+.show-item{
+    width: 100%;
+    padding:0 60rpx 0 60rpx;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    line-height: 150rpx;
+    border-bottom: 1px solid #f6f6f6;
+    justify-content: space-between;
+}
+.show-item text{
+    padding: 6rpx;
+}
+
+image{
+    border-radius: 6px;
+}

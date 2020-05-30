@@ -1,0 +1,29 @@
+/* pages/edit/edit.wxss */
+/* 总体盒子设置margin和大小 */
+.edit-box{
+    width: 90%;
+    padding: 30rpx 30rpx 0 30rpx;
+}
+/* 声明盒子 */
+.anonce{
+    margin-bottom: 30rpx;
+    color: #666;
+    font-size: 30rpx;
+}
+/* 输入盒子不处理 */
+
+/* 按钮盒子 */
+.submit-button{
+    padding-top: 40rpx;
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.submit-item{
+    flex: 1;
+}
+.submit-item .van-button{
+    width: 250rpx;
+}

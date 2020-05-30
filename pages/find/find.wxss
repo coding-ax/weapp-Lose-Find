@@ -1,0 +1,35 @@
+/* pages/find/find.wxss */
+
+/* 总盒子 */
+
+.losebox {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 照片盒子 */
+
+.box-main-img {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+.box-main-img image{
+    width: 100%;
+}
+
+
+
+swiper{
+    height: 220px;
+    padding: 3px 10px 3px 10px;
+}
+swiper-item{
+    border-radius: 6px;
+}
+image{
+    border-radius: 6px;
+}

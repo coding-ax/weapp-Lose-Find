@@ -1,0 +1,53 @@
+<!--pages/pub/pub.wxml-->
+<view class="box">
+<van-notify id="van-notify" />
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="丢失">
+            <!-- 输入框 -->
+            <van-cell-group>
+                <van-field bind:input="textSub" value="{{ text }}" label="描述" type="textarea" placeholder="请描述捡到的位置和希望展示的信息" autosize="{{size}}" clearable required border="{{ false }}" />
+            </van-cell-group>
+            <!-- 图片上传 -->
+            <view class="box-uploader">
+                <van-uploader accept="image" file-list="{{ fileList }}" max-count="6" bind:after-read="afterRead" bind:delete="deleteImg" />
+            </view>
+
+            <!-- 提交按钮 -->
+            <view class="submit-button">
+                <view class="submit-item">
+                    <!-- <van-button mutiple="{{true}}" bindtap="submit" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">提交</van-button> -->
+                      <van-button mutiple="{{true}}" bindtap="test" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">提交</van-button>
+                </view>
+                <view class="submit-item">
+                    <van-button slot="button" bindtap="nav2back" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">取消</van-button>
+                </view>
+            </view>
+
+        </van-tab>
+
+        <van-tab title="招领">
+            <!-- 是否为校园卡，是则进行提醒 -->
+            <van-cell title="是否为校园卡" icon="setting-o">
+                <van-switch checked="{{ isCard }}" bind:change="switchOnChange" />
+            </van-cell>
+            <van-cell-group wx:if="{{isCard}}">
+                <van-field value="{{ cardNum }}" bind:input="textCard" label="校园卡号" type="number" placeholder="请输入校园卡号" clearable required border="{{ false }}" bind:change="onChange" />
+            </van-cell-group>
+            <!-- 输入框 -->
+            <van-cell-group>
+                <van-field bin value="{{ text }}" bind:input="textSub2" label="描述" type="textarea" placeholder="请描述捡到的位置和希望展示的信息" autosize="{{size}}" clearable border="{{ false }}" />
+            </van-cell-group>
+            <!-- 图片上传 -->
+            <van-uploader mutiple="{{true}}" deletable preview-full-image preview-image file-list="{{ fileList2 }}" max-count="6" bind:after-read="afterRead2" bind:delete="deleteImg2" />
+            <!-- 提交 -->
+            <view class="submit-button">
+                <view class="submit-item">
+                    <van-button bindtap="submit2" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">提交</van-button>
+                </view>
+                <view class="submit-item">
+                    <van-button slot="button" bindtap="nav2back" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">取消</van-button>
+                </view>
+            </view>
+        </van-tab>
+    </van-tabs>
+</view>

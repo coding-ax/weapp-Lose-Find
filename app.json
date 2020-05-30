@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/lose/lose",
+        "pages/mylose/mylose",
+        "pages/profile/profile",
+        "pages/find/find",
+        "pages/pub/pub",
+        "pages/myfind/myfind",
+        "pages/detail/detail",
+        "pages/edit/edit"
+    ],
+    "window": {
+        "backgroundColor": "#3498db",
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#3498db",
+        "navigationBarTitleText": "失物招领",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "selectedColor": "#1296db",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/lose/lose",
+                "text": "丢失",
+                "iconPath": "/assets/img/yishiwupin.png",
+                "selectedIconPath": "/assets/img/yishiwupin_active.png"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "text": "招领",
+                "iconPath": "/assets/img/shiwuzhaoling.png",
+                "selectedIconPath": "/assets/img/shiwuzhaoling_active.png"
+            },
+            {
+                "pagePath": "pages/profile/profile",
+                "text": "我的",
+                "iconPath": "/assets/img/Icon_wode.png",
+                "selectedIconPath": "/assets/img/Icon_wode_active.png"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

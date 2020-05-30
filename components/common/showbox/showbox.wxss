@@ -1,0 +1,70 @@
+/* components/common/showbox/showbox.wxss */
+/* 主要盒子 */
+.show-box{
+    display: flex;
+    flex-direction: column;
+    width: val(100%-30rpx);
+    margin: 30rpx;
+    padding: 30rpx;
+    background-color: #fefefe;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px #888888;
+}
+/* 头像盒子 */
+.avatar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.text-box{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family:Wawati SC; */
+    padding: 30rpx;
+    width: 100%;
+}
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+.tag{
+    font-weight: 300;
+    font-size: 13px;
+}
+.name-text{
+    font-weight: 300;
+    font-size: 15px;
+}
+.date-text{
+    color: #666;
+    font-size: 12px;
+}
+
+/* 内容盒子 */
+.contentbox{
+    display: flex;
+    flex-direction: column;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    padding-right: 50rpx;
+}
+.textbox{
+    width: 100%;
+    color: #2c3e50;
+    font-weight: 300;
+    padding-bottom: 8rpx;
+    word-wrap: break-word;
+}
+
+/* 图片盒子 */
+.picbox{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+}
+.picbox image{
+    border-radius: 6px;
+    min-width: 33.3%;
+    max-width: 49%;
+}

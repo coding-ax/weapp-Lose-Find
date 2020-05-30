@@ -1,0 +1,28 @@
+<!--pages/detail/detail.wxml-->
+<view class="detailbox">
+    <showbox publicInfo="{{data}}" urls="{{data.photos}}"></showbox>
+    <!-- 按钮 -->
+    <view class="submit-button">
+        <view class="submit-item">
+            <van-button bindtap="showPopup" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">查看联系方式</van-button>
+        </view>
+        <!-- <view class="submit-item">
+            <van-button slot="button" bindtap="nav2back" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">返回</van-button>
+        </view> -->
+    </view>
+    <!-- 点击后的弹出层（查看信息） -->
+    <van-popup  round show="{{ show }}" bind:close="onClose">
+        <view class="show-message">
+            <view class="show-item" catchtap="copyPhone">
+                <text>电话号码:</text>
+                <text>{{data.phoneNumber}}</text>
+                <van-button type="primary" size="mini" >复制</van-button>
+            </view>
+            <view class="show-item" catchtap="copyQQ">
+                <text>QQ:</text>
+                <text>{{data.qqNumber}}</text>
+                <van-button type="primary" size="mini">复制</van-button>
+            </view>
+        </view>
+    </van-popup>
+</view>

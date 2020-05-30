@@ -1,0 +1,32 @@
+<!--components/common/showbox/showbox.wxml-->
+<view class="show-box">
+    <!-- 头像姓名日期框 -->
+    <view class="avatar">
+        <van-image width="3rem" round height="3rem" src="{{publicInfo.avatarURL}}" />
+        <view class="text-box">
+            <view class="first">
+            <view class="name-text">{{publicInfo.username}}</view>
+            <view class="tag">
+            <van-tag mark type="{{status[statusIndex]}}">{{status2chinese[statusIndex]}}</van-tag>
+            </view>
+            </view>
+            <view class="date-text">发布于{{publicInfo.dateTime}}</view>
+        </view>
+
+    </view>
+    <!-- content框架 -->
+    <view class="contentbox">
+        <!-- 文字框架 -->
+        <view class="textbox">
+            {{publicInfo.text}}
+        </view>
+
+
+        <!-- 图片框架 -->
+        <view class="picbox">
+            <block wx:for="{{publicInfo.photos}}" wx:key="index">
+                <image data-index="{{index}}" mode="widthFix" catchtap="clickImg"  src="{{item}}" />
+            </block>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "van-notice-bar": "@vant/weapp/notice-bar/index",
+        "van-image": "@vant/weapp/image/index",
+        "showbox": "/components/common/showbox/showbox",
+        "van-search": "@vant/weapp/search/index",
+        "small-target": "/components/common/small-target/small-target",
+        "van-toast": "@vant/weapp/toast/index"
+    },
+    "enablePullDownRefresh": true,
+    "navigationBarTitleText": "失物大厅"
+}

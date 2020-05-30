@@ -1,0 +1,17 @@
+/* components/common/small-target/small-target.wxss */
+
+.small-target {
+    position: fixed;
+    bottom: 44px;
+    right: 25px;
+    width: 100rpx;
+    height: 100rpx;
+    background-image: linear-gradient(to right, #4bb0ff, #6149f6);
+    border-radius: 50%;
+    text-align: center;
+    color: #fefefe;
+    line-height: 100rpx;
+    font-size: 60px;
+    border: 2px solid #fefefe;
+    box-shadow: 5px 5px 5px #888888;
+}

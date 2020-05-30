@@ -1,0 +1,31 @@
+<!--pages/myfind/myfind.wxml-->
+<view class="box">
+    <!-- 数据展示 -->
+    <view wx:if="{{publickInfo.length==0}}">
+    您暂无相关记录哦！快去发布一个吧！
+    </view>
+    <view class="box-lazyload-detail" wx:else>
+        <!-- <block wx:for="{{publicInfos}}"> -->
+            <block wx:for="{{publicInfos}}" wx:key="index">
+            <view bindtap="seeDetail" data-index="{{index}}">
+                <showbox publicInfo="{{item}}" urls="{{item.photos}}" statusIndex="{{item.status}}"></showbox>
+            </view>
+            <!-- 按钮 -->
+            <view class="submit-button" wx:if="{{item.status==3}}">
+                <view class="submit-item">
+                    <van-button bindtap="findBack" data-id="{{item.id}}" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">确认找回</van-button>
+                </view>
+                <view class="submit-item">
+                    <van-button slot="button" data-id="{{item.id}}" 
+                    bindtap="delete" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="normal" type="info">撤销发布</van-button>
+                </view>
+            </view>
+            <!-- <view  wx:else>
+                <view class="submit-item">
+                    <van-button bindtap="submit" slot="button" color="linear-gradient(to right, #4bb0ff, #6149f6)" size="large" type="info">已过期</van-button>
+                </view>
+            </view> -->
+        </block>
+    </view>
+    <van-dialog id="van-dialog" />
+</view>

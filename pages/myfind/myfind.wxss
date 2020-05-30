@@ -1,0 +1,18 @@
+/* pages/myfind/myfind.wxss */
+.box{
+    padding: 50rpx;
+}
+/* 按钮盒子 */
+.submit-button{
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.submit-item{
+    flex: 1;
+}
+.submit-item .van-button{
+    width: 250rpx;
+}

@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "showbox": "/components/common/showbox/showbox",
+        "van-button": "@vant/weapp/button/index",
+        "van-popup": "@vant/weapp/popup/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-notify": "@vant/weapp/notify/index",
+        "van-divider": "@vant/weapp/divider/index"
+    },
+    "navigationBarTitleText": "详细信息"
+}

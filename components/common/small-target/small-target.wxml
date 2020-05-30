@@ -1,0 +1,4 @@
+<!--components/common/small-target/small-target.wxml-->
+<view class="small-target" bindtap="nav2pub">
++
+</view>

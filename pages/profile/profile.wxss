@@ -1,0 +1,108 @@
+/* pages/profile/profile.wxss */
+
+/* 总体盒子 */
+
+.profile-box {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    /* align-items: center;
+    text-align: center; */
+}
+
+/* 未登录盒子 */
+
+.login-box {
+    width: 100vw;
+    height: 100vh;
+    padding: 30% 30%;
+}
+
+/* 登录盒子 */
+
+.avator-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px #f6f6f6 solid;
+    border-top: 1px #f6f6f6 solid;
+    margin: 10rpx 10rpx 10rpx 10rpx;
+}
+
+/* 头像部分盒子里面的按钮 */
+
+.avator-box .van-button {
+    width: 200rpx;
+    position: relative;
+    top: -45rpx;
+    margin-left: 20rpx;
+    /* font-size: 20rpx; */
+}
+
+/* 头像和名字盒子 */
+
+.box-item {
+    padding: 20rpx 20rpx 0 20rpx;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: 200rpx;
+    align-items: flex-start;
+    /* text-align: center; */
+    line-height: 150rpx;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* justify-content: center; */
+}
+
+/* 头像 */
+
+.box-item .van-image {
+    width: 30%;
+}
+
+/* 文字 */
+
+.box-item text {
+    width: 70%;
+    color: #888;
+    font-weight: 400;
+}
+
+/* 编辑个人资料 */
+
+/* 资料盒子 */
+.message-box {
+    margin: 50rpx 50rpx 0 50rpx;
+}
+/* 资料小盒子 */
+.message-item {
+    margin: 0 0 20rpx 15rpx;
+    border-bottom: 1px solid #f6f6f6;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+/* 资料键值对 */
+.key{
+    padding-left: 20rpx;
+    width: 50%;
+    line-height: 20rpx;
+    font-weight: 600;
+}
+.value{
+    font-style: italic;
+    color: #888888;
+}
+
+/* 联系运营 */
+.dev{
+    margin-top: 150rpx;
+}
+.van-button{
+    margin-left: 10rpx;
+}

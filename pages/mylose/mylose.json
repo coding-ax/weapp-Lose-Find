@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "showbox": "/components/common/showbox/showbox",
+        "van-button": "@vant/weapp/button/index",
+        "van-dialog": "@vant/weapp/dialog/index"
+    },
+    "navigationBarTitleText": "我的丢失",
+    "enablePullDownRefresh": true
+}

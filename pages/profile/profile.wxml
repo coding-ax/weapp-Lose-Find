@@ -1,0 +1,86 @@
+<!--pages/profile/profile.wxml-->
+<view class="profile-box">
+    <!-- 登录的容器 -->
+    <view class="wechat-login-box">
+        <!-- 未登录 -->
+        <view wx:if="{{!hasUserInfo && canIUse}}" class="login-box">
+            <van-button open-type="getUserInfo" bindgetuserinfo="getUserInfo" icon="/assets/img/Icon_wode.png" color="linear-gradient(to right, #4bb0ff, #6149f6)" round>
+                点击微信登录
+            </van-button>
+        </view>
+
+
+        <!-- 已经登录 -->
+        <view wx:else>
+            <!-- 头像框和编辑栏 -->
+            <view class="avator-box">
+                <view class="box-item">
+                    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+                    <van-image width="4rem" height="4rem" round src="{{userInfo.avatarUrl}}"></van-image>
+                </view>
+                <van-button type="info" size="small" bindtap="nav2edit">编辑个人资料</van-button>
+            </view>
+            <!-- 我的信息 -->
+            <view class="message-box">
+                <view class="message-item">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/college.png"></van-image>
+                    <text class="key">学院:</text>
+                    <text class="value">{{userDetail.college}}</text>
+                </view>
+                <view class="message-item">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/card.png"></van-image>
+                    <text class="key">校园卡号:</text>
+                    <text class="value">{{userDetail.cardNumber}}</text>
+                </view>
+            </view>
+            <view class="message-box">
+                <view class="message-item">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/phone.png"></van-image>
+                    <text class="key">手机号:</text>
+                    <text class="value">{{userDetail.phoneNumber}}</text>
+                </view>
+                <view class="message-item">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/QQ.png"></van-image>
+                    <text class="key">QQ:</text>
+                    <text class="value">{{userDetail.qqNumber}}</text>
+                </view>
+                <view class="message-item">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/email.png"></van-image>
+                    <text class="key">email:</text>
+                    <text class="value">{{userDetail.email}}</text>
+                </view>
+            </view>
+
+            <!-- 我的招领 -->
+            <view class="message-box">
+                <view class="message-item" catchtap="gotomylose">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/lost.png"></van-image>
+                    <text class="key">查看我的失物记录</text>
+                     
+                </view>
+                <view class="message-item" catchtap="gotomyfind">
+                    <van-image width="1.3rem" height="1.3rem" src="/assets/img/find.png"></van-image>
+                    <text class="key">查看我的招领记录</text>
+                </view>
+            </view>
+            <!-- 联系运营者 -->
+            <view class="dev">
+                <view class="message-box">
+                    <view class="message-item">
+                        <van-image width="1.3rem" height="1.3rem" src="/assets/img/server.png"></van-image>
+                        <!-- <text class="key"></text> -->
+                        <van-button hairline plain open-type="contact" type="info" size="small">联系客服</van-button>
+                        <text class="value"></text>
+                    </view>
+                    <view class="message-item">
+                        <van-image width="1.3rem" height="1.3rem" src="/assets/img/help.png"></van-image>
+                        <!-- <text class="key">查看帮助</text> -->
+                        <van-button hairline plain  type="info" size="small">查看帮助</van-button>
+                        <text class="value"></text>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+</view>

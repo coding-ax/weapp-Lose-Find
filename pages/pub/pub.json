@@ -1,0 +1,14 @@
+{
+    "usingComponents": {
+        "van-tab": "@vant/weapp/tab/index",
+        "van-tabs": "@vant/weapp/tabs/index",
+        "van-panel": "@vant/weapp/panel/index",
+        "van-cell": "@vant/weapp/cell/index",
+        "van-cell-group": "@vant/weapp/cell-group/index",
+        "van-switch": "@vant/weapp/switch/index",
+        "van-field": "@vant/weapp/field/index",
+        "van-uploader": "@vant/weapp/uploader/index",
+        "van-button": "@vant/weapp/button/index",
+        "van-notify": "@vant/weapp/notify/index"
+    }
+}

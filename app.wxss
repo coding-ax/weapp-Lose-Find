@@ -1,0 +1,19 @@
+/**app.wxss**/
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+    /* 设置布局图 */
+}
+
+page {
+    font-family: "Lantinghei SC";
+    font-size: 32rpx;
+    font-weight: 200;
+    background-color: #ecf0f1;
+}
