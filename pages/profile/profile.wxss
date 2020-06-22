@@ -106,3 +106,14 @@
 .van-button{
     margin-left: 10rpx;
 }
+/*  */
+.text-box{
+    padding: 100rpx 30rpx 30rpx;
+}
+.text-title{
+    font-size: 32rpx;
+    font-weight: bolder;
+}
+.text-content{
+    font-size: 28rpx;
+}

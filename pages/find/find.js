@@ -47,7 +47,7 @@ Page({
             title: '搜索中',
         })
         wx.request({
-            url: `https://khany.top:8080/lof/searchevent?content=${value}&status=1`,
+            url: `https://khany.top:8080/lof/searchevent?content=${value}&status=3`,
             success: res => {
                 console.log(res)
                 // 搜索有结果

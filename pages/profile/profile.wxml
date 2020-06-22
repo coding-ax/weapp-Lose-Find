@@ -75,7 +75,7 @@
                     <view class="message-item">
                         <van-image width="1.3rem" height="1.3rem" src="/assets/img/help.png"></van-image>
                         <!-- <text class="key">查看帮助</text> -->
-                        <van-button hairline plain  type="info" size="small">查看帮助</van-button>
+                        <van-button hairline plain  type="info" catchtap="showTag" size="small">查看帮助</van-button>
                         <text class="value"></text>
                     </view>
                 </view>
@@ -83,4 +83,46 @@
 
         </view>
     </view>
+    <!-- popup层 -->
+    <van-popup
+  show="{{ isshow }}"
+  closeable
+  position="bottom"
+  custom-style="height:60%"
+  bind:close="onClose"
+    >
+    
+    <view class="text-box">
+    <view class="text-title">产品介绍</view>
+    <view class="text-content">
+    找卡卡是针对武汉理工大学开发的一款失物招领小程序。基于校园易发的失物现象，本产品提供了公开、便捷的信息平台；对于校园卡等重要证件的找回给予额外反馈，保障学生的校园生活。
+感谢您使用本产品，如有意见和建议，可通过电子邮箱codingax@whut.edu.cn与我们取得联系。
+    </view>
+   <view class="text-title"> 功能索引</view>
+
+<view class="text-title">
+1.	身份认证
+</view> 
+   <view class="text-content">
+   您可以在“我的”界面进行个人信息完善，方便与捡到您失物的用户及时联系。特别地，完善邮箱信息后，若存在待招领校园卡卡号与您丢失的卡号一致的情况，我们将以邮件形式通知您。
+   </view> 
+<view class="text-title">
+2.	丢失
+</view>
+<view class="text-content">
+  您可以在“丢失”界面，进入招领大厅进行物品挂失，您可以在时间线上看到待招领物品。您可以通过查询关键词来找寻您的失物，匹配成功后点击时间线上的待招领信息即可查询拾取者联系方式；若没有匹配的信息，您也可以点击右下角的加号来发布物品的具体信息。
+</view>
+ 
+<view class="text-title">
+3.	招领
+</view>
+<view class="text-content">
+    您可以在“招领”界面，进入失物大厅进行物品招领，您可以在时间线上看到最新的失物信息。您可以通过查询关键词来找寻物品失主；若没有匹配的信息，您也可以点击右下角的加号来发布物品的具体信息。
+</view>
+
+<view class="copyright">
+@copyright 打不过就跑 版权所有
+</view>
+        </view>
+    </van-popup>
 </view>

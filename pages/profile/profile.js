@@ -17,6 +17,7 @@ Page({
             qqNumber: '',
             email: '',
         },
+        isshow: false
     },
     //事件处理函数
     getUserInfo: function (e) {
@@ -64,17 +65,9 @@ Page({
                     userDetail: data
                 })
                 wx.hideLoading({
-                    complete: (res) => {},
+                    complete: (res) => { },
                 })
                 console.log(data)
-                // this.data.userDetail['truename']=data.truename
-                // this.data.userDetail['college'] = data.college
-                // this.data.userDetail['email'] = data.email
-                // this.data.userDetail['phoneNumber'] = data.phoneNumber
-                // this.data.userDetail['qqNumber'] = data.qqNumber
-                // this.setData({
-                //     data:this.data
-                // })
             }
         })
     },
@@ -86,7 +79,17 @@ Page({
             url: '/pages/mylose/mylose?openid=' + this.data.openid,
         })
     },
-
+    // 展示提示
+    showTag() {
+        this.setData({
+            isshow: true
+        })
+    },
+    onClose() {
+        this.setData({
+            isshow: false
+        })
+    },
     // 我的招领
     gotomyfind() {
         wx.navigateTo({
